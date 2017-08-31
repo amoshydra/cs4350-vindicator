@@ -10,7 +10,7 @@ IF %choice%==y (
   xcopy /s .\Scripts\LeapEnabled\temp.uproject . /Y
 )
 
-SteamVrDemo.uproject
+temp.uproject
 
 echo Ok. Launching Project
 pause
