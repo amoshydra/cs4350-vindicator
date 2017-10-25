@@ -76,13 +76,13 @@
   </article>
   
   
-  <article id="downloads" class="text-center" name="downloads">
+  <article id="download" class="text-center" name="download">
     <div class="container">
       <div class="row">
         <div class="col">
           <DragonTitle>Downloads</DragonTitle>
           <a class="btn--portal" href="#download">
-            <p>Coming soon at itch.io</p>
+            <p>Coming soon to itch.io</p>
           </a>
         </div>
       </div>
