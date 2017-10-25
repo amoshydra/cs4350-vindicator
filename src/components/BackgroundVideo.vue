@@ -1,7 +1,7 @@
 <template>
   <div class="bv-wrapper">
     <video class="bv-video"
-           autoplay muted
+           autoplay muted playsinline
            loop
            :src="link"></video>
     <div class="bv-overlay"></div>

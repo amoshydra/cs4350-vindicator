@@ -2,7 +2,7 @@
   <div class="vd-slide">
     <video class="vd-slide-media"
            v-if="video"
-           autoplay loop muted
+           autoplay loop muted playsinline
            :src='video'></video>
     <img class="vd-slide-media"
          v-if="image"
