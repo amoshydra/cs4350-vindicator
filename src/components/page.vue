@@ -1,6 +1,6 @@
 <template>
 <div>
-  <article name="introduction" style="width: 100%; height: 100vh; padding: 0;">
+  <article id="introduction" name="introduction" style="width: 100%; height: 100vh; padding: 0;">
     <BackgroundVideo :link="'https://giant.gfycat.com/RepulsiveTidyAmericanlobster.mp4'">
       <DragonTitle style="transform: scale(1)">
         <div style="text-decoration: underline;">VindicatoR</div>
@@ -11,7 +11,7 @@
     </BackgroundVideo>
   </article>
   
-  <article name="story">
+  <article id="story" name="story">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -45,7 +45,7 @@
     </div>
   </article>
   
-  <article name="feature"
+  <article id="feature" name="feature"
            style="width: 100%;
                   background: black;
                   display: block;
@@ -73,30 +73,20 @@
   </article>
   
   
-  <article class="text-center" name="downloads">
+  <article id="downloads" class="text-center" name="downloads">
     <div class="container">
       <div class="row">
         <div class="col">
           <DragonTitle>Downloads</DragonTitle>
-          <a class="btn btn-primary" href="#">
-            Coming soon at itch.io
+          <a class="btn--portal" href="#download">
+            <p>Coming soon at itch.io</p>
           </a>
         </div>
       </div>
     </div>
   </article>
   
-  <article name="user-guide">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <DragonTitle>User Guide</DragonTitle>
-        </div>
-      </div>
-    </div>
-  </article>
-  
-  <article name="about-us">
+  <article id="about-us" name="about-us" style="background: black;">
     <div class="container">
     <div class="row">
       <div class="col">
@@ -164,8 +154,11 @@ article {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  border-bottom: 12px solid black;
-  border-top: 12px solid black;
+  border-bottom: 4px solid black;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 
   > .container {
     margin-top: auto;
@@ -180,6 +173,43 @@ h1 {
 
 video, img {
   max-width: 100%;
+}
+
+.btn--portal {
+  background-image: url(../assets/images/portal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  // Set size
+  height: 17em;
+  width: 15em;
+  max-width: 100%;
+
+  // Centralise object
+  margin: auto;
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+
+  // Set effect
+  opacity: 0.8;
+  transition: opacity 0.5s;
+  text-decoration: none;
+  color: white;
+  font-family: DragonSlapper;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+  }
+
+  > * {
+    margin: auto;
+    padding-left: 7em;
+    padding-right: 7em;
+  }
 }
 
 .members {
