@@ -146,7 +146,7 @@ export default {
 
 <style lang="scss">
 body {
-  background: url('../assets/images/bg-grassland.jpg');
+  background: url('../assets/images/bg-grassland-small.jpg');
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
