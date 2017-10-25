@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 .vd-slide {
   text-align: center;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 
   &::after {
@@ -30,10 +30,10 @@ export default {
     display: block;
     height: 35%;
     width: 100%;
-    top: 0;
+    bottom: 0;
     position: absolute;
     background: rgba(0,0,0,0.1);
-    background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.28) 51%, rgba(0,0,0,0.36) 76%, rgba(0,0,0,0.41) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.28) 51%, rgba(0,0,0,0.36) 76%, rgba(0,0,0,0.41) 100%);
   }
 }
 
@@ -53,9 +53,9 @@ export default {
   z-index: 3;
   position: absolute;
   color: white;
-  top: 0;
+  bottom: 0;
   width: 100%;
-  margin-top: 2.5em;
+  margin-bottom: 1.5em;
   font-family: DragonSlapper;
   font-size: 1.5em;
 }

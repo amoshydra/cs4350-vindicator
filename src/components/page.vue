@@ -45,31 +45,34 @@
     </div>
   </article>
   
-  <article id="feature" name="feature"
+  <article id="features" name="features"
            style="width: 100%;
                   background: black;
                   display: block;
-                  padding: 0;
                   min-height: initial;">
-    <DragonTitle style="display: none;">Feature</DragonTitle>
-    <agile :arrows="false"
-           :dots="false"
-           :autoplay="true"
-           :pauseOnHover="false"
-           :autoplaySpeed="4000"
-           :timing="'linear'"
-           :fade="true"
-    >
-      <Slide video="https://giant.gfycat.com/RepulsiveTidyAmericanlobster.mp4">
-        Crisp Graphics
-      </Slide>
-      <Slide video="https://giant.gfycat.com/HarmoniousJampackedIlsamochadegu.mp4">
-        Immersive Spell Combinations
-      </Slide>
-      <Slide image="https://user-images.githubusercontent.com/8733840/31319182-43dd5efe-ac91-11e7-8cfc-2a1f08747362.gif">
-        Intuitive Spell Casting
-      </Slide>
-    </agile>
+    <div class="container">
+    
+      <DragonTitle>Features</DragonTitle>
+
+      <agile :arrows="false"
+            :dots="false"
+            :autoplay="true"
+            :pauseOnHover="false"
+            :autoplaySpeed="4000"
+            :timing="'linear'"
+            :fade="true"
+      >
+        <Slide video="https://giant.gfycat.com/RepulsiveTidyAmericanlobster.mp4">
+          Crisp Graphics
+        </Slide>
+        <Slide video="https://giant.gfycat.com/HarmoniousJampackedIlsamochadegu.mp4">
+          Immersive Spell Combinations
+        </Slide>
+        <Slide image="https://user-images.githubusercontent.com/8733840/31319182-43dd5efe-ac91-11e7-8cfc-2a1f08747362.gif">
+          Intuitive Spell Casting
+        </Slide>
+      </agile>
+    </div>
   </article>
   
   
