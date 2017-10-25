@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Navigation/>
     <Page/>
   </div>
 </template>
 
 <script>
 import Page from './components/page';
+import Navigation from './components/Navigation';
 
 export default {
   name: 'app',
   components: {
     Page,
+    Navigation,
   },
 };
 </script>
