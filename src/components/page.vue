@@ -97,6 +97,10 @@
         <div class="members">
           <Member v-for="member in human" :key="member.initial" :member="member"></Member>
         </div>
+
+        <p class="text-center">
+          Visit out Development Blog <a href="https://flat8studios.wordpress.com/">here</a>
+        </p>
       </div>
     </div>
     </div>
