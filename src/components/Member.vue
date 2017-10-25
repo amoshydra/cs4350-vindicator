@@ -22,10 +22,10 @@ $margin: 30px;
 
 .member {
   border: 1px solid black;
-  width: calc(33% - #{$margin * 2});
+  width: calc(25% - #{$margin * 2});
   margin: $margin;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
 
   .member--wrapper {
     position: relative;
@@ -67,10 +67,10 @@ $margin: 30px;
   margin-bottom: 0.5em;
 }
 .member--name {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 900;
 }
 .member--role {
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 </style>

@@ -81,8 +81,11 @@
       <div class="row">
         <div class="col">
           <DragonTitle>Downloads</DragonTitle>
-          <a class="btn--portal" href="#download">
+          <a class="btn--portal" style="display: none;" href="#download">
             <p>Coming soon to itch.io</p>
+          </a>
+          <a class="btn--download not-ready" href="#download">
+            Coming soon to itch.io
           </a>
         </div>
       </div>
@@ -98,7 +101,7 @@
           <Member v-for="member in human" :key="member.initial" :member="member"></Member>
         </div>
 
-        <p class="text-center">
+        <p class="text-center" style="margin-top: 3em;">
           Visit out Development Blog <a href="https://flat8studios.wordpress.com/">here</a>
         </p>
       </div>
@@ -129,12 +132,12 @@ export default {
   data() {
     return {
       human: [
-        { name: 'Tay Jie Hao', role: 'Programmer', initial: 'tjh' },
-        { name: 'Amos Wong', role: 'Programmer', initial: 'amos' },
-        { name: 'Ken Lim', role: 'Programmer', initial: 'ken' },
-        { name: 'Chua Jia Xuan', role: 'Programmer', initial: 'cjx' },
-        { name: 'Lek Jia Ying', role: 'Programmer', initial: 'ljy' },
-        { name: 'Tan Jun Kiat', role: 'Programmer', initial: 'tjk' },
+        { name: 'Tan Jun Kiat', role: '', initial: 'tjk' },
+        { name: 'Tay Jie Hao', role: '', initial: 'tjh' },
+        { name: 'Ken Lim', role: '', initial: 'ken' },
+        { name: 'Chua Jia Xuan', role: '', initial: 'cjx' },
+        { name: 'Amos Wong', role: '', initial: 'amos' },
+        { name: 'Lek Jia Ying', role: '', initial: 'ljy' },
       ],
     };
   },
@@ -180,6 +183,20 @@ h1 {
 
 video, img {
   max-width: 100%;
+}
+
+.btn--download,
+.btn--download:hover,
+.btn--download:active,
+.btn--download:visited {
+  border: 1.5px solid white;
+  padding: 0.8em;
+  color: white;
+  margin-top: 40px;
+  display: inline-block;
+}
+.btn--download.not-ready {
+  border: 1.5px dashed white;
 }
 
 .btn--portal {

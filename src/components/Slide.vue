@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 .vd-slide {
   text-align: center;
-  height: 80vh;
+  height: 70vh;
   position: relative;
 
   &::after {
@@ -48,6 +48,7 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 0.5em;
 }
 .vd-slide-content {
   z-index: 3;
