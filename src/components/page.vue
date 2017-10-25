@@ -147,10 +147,11 @@ export default {
 <style lang="scss">
 body {
   background: url('../assets/images/bg-grassland.jpg');
+  background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  background-color: black;
   background-size: cover;
+  max-height: 100vh;
   color: white;
 }
 
