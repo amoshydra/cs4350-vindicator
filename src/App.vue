@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <Page/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Page from './components/page';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    Page,
   },
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+  font-family: 'Slabo 27px', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
