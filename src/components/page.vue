@@ -15,29 +15,13 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <DragonTitle>Story</DragonTitle>
+          <DragonTitle>VR Action Fantasy</DragonTitle>
           
-          <div class="columns-2">
+          <div style="max-width: 480px; margin: auto;">
             <p>
-              Ever since the Great Mages' Battle six centuries ago, which devastated the lands and the non-magicals,
-              the sacred art of magic was banned throughout the Kingdom of Drotis by the Elders, a council comprising
-              of the last High Archmages and intelligent non-magicals. 
-            </p>
-            <p>
-              A few decades later, the evil magical creatures slowly began venturing into the Kingdom's lands. Initially
-              only killing livestocks, they soon began destroying people's homes, before it worsened into destruction of
-              several outpost and killing of the Kingdom's scouts. The kingdom decided enough was enough and sent out a
-              majority of its army to drive these creature back into the Unknown.
-              Days past but no news returned from any of the Kingdom's units. 
-            </p>
-            <p>
-              The Elders feared something wrong must have happened. This fear finally materialised when a severely wounded
-              scout returned with a message. The message reported a horde of these evil creatures gathering on the border
-              of The Unknowns, with the Kingdom's armies that was sent out there, barely surviving and just managing to
-              prevent the initial wave of invasion. The message predicted 3 to 5 days before the Kingdom's force would be
-              overrun and the horde will arrive at the gates of the Kingdom. A full-scale invasion was undeniably imminent.
-              With not much units left to defend the Kingdom, the Elders decided it was time to lift the ban on magic and
-              gather any abled-body mage to help with protecting the kingdo      
+              VindicatoR​ is a VR action fantasy game set in the medieval times. Dive straight into fast-paced action as you take on the role of a wizard out for vengeance against waves of monsters hell-bent on destroying your Kingdom. 
+              Quick reflexes and a mastery of the elemental arts are crucial to survive the relentless waves of enemies across a multitude of levels and environments.
+              In VindicatoR, there would be four elements to choose from: Fire, Wind, Lightning &amp; Ice. Not only cast you cast them, as a master of the elemental arts, you can also merge spells of the same or different elements together to create more powerful combinations in a fun and immersive way!
             </p>
           </div>
         </div>
