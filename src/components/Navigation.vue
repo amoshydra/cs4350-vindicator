@@ -1,70 +1,95 @@
 <template>
-  <nav>
-    <scrollactive ref="scrollactive" class="nav--list">
-      <a class="scrollactive-item" href="#introduction">VindicatoR</a>
+  <scrollactive
+    ref="scrollactive"
+    class="nav--list d-sm-none d-md-block"
+    :style="'background-color: rgba(0,0,0,' + navOpacity + ');'"
+    :offset="offset"
+    :duration="800">  
+    <a class="scrollactive-item" :style="'opacity:' + (navOpacity + 0.3) + ';'" href="#introduction">VindicatoR</a>
+    <div style="float: right;">
       <a class="scrollactive-item" href="#story">Story</a>
-      <a class="scrollactive-item" href="#feature">Feature</a>
-      <a class="scrollactive-item" href="#downloads">Download</a>
+      <a class="scrollactive-item" href="#features">Features</a>
+      <a class="scrollactive-item" href="#download">Download</a>
       <a class="scrollactive-item" href="#about-us">About</a>
-      <a href="https://flat8studios.wordpress.com/">Dev Blog</a>
-    </scrollactive>
-  </nav>
+      <a target="_blank" href="https://flat8studios.wordpress.com/">Dev Blog</a>
+    </div>
+    <span style="clear: both"></span>
+  </scrollactive>
 </template>
 
 <script>
 import Vue from 'vue';
 import Scrollactive from 'vue-scrollactive';
+import _ from 'lodash';
 
 Vue.use(Scrollactive);
 
 export default {
+  data() {
+    return {
+      scrollTop: 0,
+      offset: 0,
+    };
+  },
   computed: {
-
+    navOpacity() {
+      const opaqueCeiling = window.innerHeight / 2;
+      const scrollFactor = Math.min(this.scrollTop, opaqueCeiling) / opaqueCeiling;
+      return scrollFactor;
+    },
   },
   mounted() {
-
+    window.addEventListener('scroll', _.throttle(() => {
+      this.scrollTop = window.scrollY;
+    }), 100);
+    this.offset = this.$el.clientHeight;
+  },
+  beforeDestroy() {
   },
 };
 </script>
 
 <style scoped lang="scss">
 nav {
-  background: none;
+  background: rgba(0,0,0,0);
   position: fixed;
   width: 100%;
   z-index: 10;
-
-  &::before {
-    z-index: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: rgba(0,0,0,0.1);
-    background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.28) 51%, rgba(0,0,0,0.36) 76%, rgba(0,0,0,0.41) 100%);
-    background: rgba(0,0,0,1);
-    pointer-events: none;
-  }
 }
 
 .nav--list {
-  padding-left: 2em;
+  $default-opacity: 0.3;
 
-a {
+  a, a:visited {
     font-family: DragonSlapper;
     color: white;
     text-decoration: none;
     display: inline-block;
-    padding: 1em;
-    font-size: 0.8em;
-    opacity: 0.5;
+    padding: 0.9em;
+    font-size: 0.9em;
+    opacity: $default-opacity;
+
+    transition: opacity 0.5s;
+  }
+  a:hover {
+    opacity: 0.7;
   }
   a.is-active {
-    opacity: 0.9999;
-    z-index: 10;    
+    opacity: 1;
   }
-} 
+}
+
+</style>
+
+<style lang="scss">
+.d-sm-none {
+  @media only screen and (max-width: 480px) {
+    display: none !important;
+  }
+}
+.d-md-block {
+  @media only screen and (min-width: 481px) {
+    display: block;
+  }
+}
 </style>
