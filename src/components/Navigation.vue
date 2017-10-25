@@ -1,7 +1,7 @@
 <template>
   <scrollactive
     ref="scrollactive"
-    class="nav--list d-sm-none d-md-block"
+    class="nav--list d-none d-md-block"
     :style="'background-color: rgba(0,0,0,' + navOpacity + ');'"
     :offset="offset"
     :duration="800">  
@@ -79,17 +79,4 @@ nav {
   }
 }
 
-</style>
-
-<style lang="scss">
-.d-sm-none {
-  @media only screen and (max-width: 480px) {
-    display: none !important;
-  }
-}
-.d-md-block {
-  @media only screen and (min-width: 481px) {
-    display: block;
-  }
-}
 </style>
