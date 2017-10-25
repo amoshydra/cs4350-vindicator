@@ -18,14 +18,27 @@ export default {
 </script>
 
 <style lang="scss">
-$margin: 30px;
+$number-of-member: 6;
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 480px;
+  margin: auto;
+}
 
 .member {
-  border: 1px solid black;
-  width: calc(25% - #{$margin * 2});
-  margin: $margin;
+  $margin: 1px;
+
+  width: calc((100% / #{$number-of-member / 3}) - #{$margin * 2});
+  @media only screen and (min-width: 480px) {
+    width: calc((100% / #{$number-of-member / 2}) - #{$margin * 2});
+  }
+
   text-align: center;
   font-size: 1em;
+  margin: $margin;
 
   .member--wrapper {
     position: relative;
@@ -62,7 +75,7 @@ $margin: 30px;
 .member--info {
   z-index: 1;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   margin-bottom: 0.5em;
 }

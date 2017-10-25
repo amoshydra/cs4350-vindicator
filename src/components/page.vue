@@ -116,12 +116,12 @@ export default {
   data() {
     return {
       human: [
-        { name: 'Tan Jun Kiat', role: '', initial: 'tjk' },
         { name: 'Tay Jie Hao', role: '', initial: 'tjh' },
         { name: 'Ken Lim', role: '', initial: 'ken' },
         { name: 'Chua Jia Xuan', role: '', initial: 'cjx' },
-        { name: 'Amos Wong', role: '', initial: 'amos' },
+        { name: 'Tan Jun Kiat', role: '', initial: 'tjk' },
         { name: 'Lek Jia Ying', role: '', initial: 'ljy' },
+        { name: 'Amos Wong', role: '', initial: 'amos' },
       ],
     };
   },
@@ -219,27 +219,6 @@ video, img {
     padding-left: 7em;
     padding-right: 7em;
   }
-}
-
-.members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.member {
-  border: 1px solid black;
-  min-width: 240px;
-  width: 33%;
-  height: auto;
-}
-.member .img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.member .img img {
-  width: 100%;
 }
 </style>
 
