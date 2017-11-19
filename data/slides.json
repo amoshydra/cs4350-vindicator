@@ -14,11 +14,11 @@
   "about": "Flat8Studios was founded by members of 2017 batch of Game Development Lab (4350), NUS School of Computing. We are a group of like-minded individuals who have a passion to create creative and fun games.",
   
   "human": [
-    { name: 'Tay Jie Hao', role: '', url: 'http://www.vindicator.ga/images/head/tjh.jpg' },
-    { name: 'Ken Lim', role: '', url: 'http://www.vindicator.ga/images/head/ken.jpg' },
-    { name: 'Chua Jia Xuan', role: '', url: 'http://www.vindicator.ga/images/head/cjx.jpg' },
-    { name: 'Tan Jun Kiat', role: '', url: 'http://www.vindicator.ga/images/head/tjk.jpg' },
-    { name: 'Lek Jia Ying', role: '', url: 'http://www.vindicator.ga/images/head/ljy.jpg' },
-    { name: 'Amos Wong', role: '', url: 'http://www.vindicator.ga/images/head/amos.jpg' }, 
+    { "name": "Tay Jie Hao", "role": "", "url": "http://www.vindicator.ga/images/head/tjh.jpg" },
+    { "name": "Ken Lim", "role": "", "url": "http://www.vindicator.ga/images/head/ken.jpg" },
+    { "name": "Chua Jia Xuan", "role": "", "url": "http://www.vindicator.ga/images/head/cjx.jpg" },
+    { "name": "Tan Jun Kiat", "role": "", "url": "http://www.vindicator.ga/images/head/tjk.jpg" },
+    { "name": "Lek Jia Ying", "role": "", "url": "http://www.vindicator.ga/images/head/ljy.jpg" },
+    { "name": "Amos Wong", "role": "", "url": "http://www.vindicator.ga/images/head/amos.jpg" }
   ]
 }
