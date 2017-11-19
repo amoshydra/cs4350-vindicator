@@ -1,7 +1,7 @@
 <template>
   <div class="member">
     <div class="member--wrapper">
-      <img :src="'/images/head/' + member.initial + '.jpg'">
+      <img :src="member.url">
       <div class="member--info">
         <div class="attach-bottom">
           <div class="member--name"> {{ member.name }} </div>

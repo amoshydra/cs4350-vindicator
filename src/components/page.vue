@@ -1,7 +1,7 @@
 <template>
 <div>
   <article id="introduction" name="introduction" style="width: 100%; height: 100vh; padding: 0;">
-    <BackgroundVideo :link="'https://giant.gfycat.com/RepulsiveTidyAmericanlobster.mp4'">
+    <BackgroundVideo :link="responseData.background">
       <DragonTitle style="transform: scale(1)">
         <div style="text-decoration: underline;">VindicatoR</div>
         <div style="font-size: 0.3em; margin-top: -0.3em;">
@@ -19,9 +19,7 @@
           
           <div style="max-width: 480px; margin: auto;">
             <p>
-              VindicatoR​ is a VR action fantasy game set in the medieval times. Dive straight into fast-paced action as you take on the role of a wizard out for vengeance against waves of monsters hell-bent on destroying your Kingdom. 
-              Quick reflexes and a mastery of the elemental arts are crucial to survive the relentless waves of enemies across a multitude of levels and environments.
-              In VindicatoR, there would be four elements to choose from: Fire, Wind, Lightning &amp; Ice. Not only cast you cast them, as a master of the elemental arts, you can also merge spells of the same or different elements together to create more powerful combinations in a fun and immersive way!
+              {{ responseData.story }}
             </p>
           </div>
         </div>
@@ -39,7 +37,7 @@
       <DragonTitle>Features</DragonTitle>
 
       <agile
-        v-if="slides.length > 0"
+        v-if="responseData.slides.length > 0"
         :arrows="false"
         :dots="false"
         :autoplay="true"
@@ -49,7 +47,7 @@
         :fade="true"
       >
         <Slide
-          v-for="(slide, key) in slides"
+          v-for="(slide, key) in responseData.slides"
           :key="key"
           :video="slide.video"
           :image="slide.image"
@@ -92,13 +90,11 @@
         <DragonTitle>About us</DragonTitle>
 
         <p style="max-width: 480px; margin: 1em auto;">
-          Flat8Studios was founded by members of 2017 batch of Game Development Lab (4350),
-          NUS School of Computing. We are a group of like-minded individuals who have a
-          passion to create creative and fun games.
+          {{ responseData.about }}
         </p>
 
         <div class="members">
-          <Member v-for="member in human" :key="member.initial" :member="member"></Member>
+          <Member v-for="member in responseData.human" :key="member.initial" :member="member"></Member>
         </div>
 
         <p class="text-center" style="margin-top: 3em;">
@@ -131,15 +127,13 @@ export default {
   },
   data() {
     return {
-      human: [
-        { name: 'Tay Jie Hao', role: '', initial: 'tjh' },
-        { name: 'Ken Lim', role: '', initial: 'ken' },
-        { name: 'Chua Jia Xuan', role: '', initial: 'cjx' },
-        { name: 'Tan Jun Kiat', role: '', initial: 'tjk' },
-        { name: 'Lek Jia Ying', role: '', initial: 'ljy' },
-        { name: 'Amos Wong', role: '', initial: 'amos' },
-      ],
-      slides: [],
+      responseData: {
+        slides: [],
+        background: '',
+        story: '',
+        about: '',
+        human: [],
+      },
     };
   },
   mounted() {
@@ -154,7 +148,7 @@ export default {
 
     getCORS('https://amoshydra.github.io/cs4350-vindicator/data/slides.json', (request) => {
       const response = request.currentTarget.response || request.target.responseText;
-      this.slides = JSON.parse(response);
+      this.responseData = JSON.parse(response);
     });
   },
 };
