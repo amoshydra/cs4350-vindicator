@@ -65,12 +65,20 @@
       <div class="row">
         <div class="col">
           <DragonTitle>Downloads</DragonTitle>
-          <a class="btn--portal" style="display: none;" href="#download">
-            <p>Coming soon to itch.io</p>
-          </a>
-          <a class="btn--download not-ready" href="#download">
-            Coming soon to itch.io
-          </a>
+
+          <div style="margin: 8em auto;">
+            <a class="btn--portal" style="display: none;" href="https://flat8studios.itch.io/vindicator#download">
+              <p>Visit itch.io</p>
+            </a>
+            <a class="btn--download not-ready" style="display: none;" href="#download">
+              Coming soon to itch.io
+            </a>
+
+            <p style="margin: 0 auto;">Download now at</p>
+            <a class="btn--download--image" href="https://flat8studios.itch.io/vindicator#download">
+              <img src="../assets/images/itch-io.svg">
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -179,9 +187,31 @@ video, img {
   color: white;
   margin-top: 40px;
   display: inline-block;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 .btn--download.not-ready {
   border: 1.5px dashed white;
+}
+.btn--download--image {
+  display: inline-block;
+  width: 260px;
+  border: 1px solid white;
+  padding: 1em;
+  background-color: rgba(0,0,0,0.4);
+  transition: box-shadow 0.3s,
+              transform 0.1s;
+
+  img {
+    max-width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 160px 0 rgba(255, 250, 236, 0.5);
+  }
+  &:active {
+    transform: scale(0.99);
+    box-shadow: 0 0 160px 0 rgba(255, 250, 236, 0.8);
+  }
 }
 
 .btn--portal {
