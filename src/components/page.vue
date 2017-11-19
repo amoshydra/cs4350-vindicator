@@ -31,7 +31,7 @@
   
   <article id="features" name="features"
            style="width: 100%;
-                  background: black;
+                  background: rgba(0,0,0,0.8);
                   display: block;
                   min-height: initial;">
     <div class="container">
@@ -237,5 +237,13 @@ article[name="introduction"] .dt-text {
   font-size: 1.3em;
   @media only screen and (min-width: 480px) { font-size: 1.8em; }
   @media only screen and (min-width: 786px) { font-size: 3em; }
+}
+article[name="download"] {
+  background: url('../assets/images/bg-door.png');
+  background-position: center;
+}
+article[name="about-us"] {
+  // background: url('../assets/images/bg-iceland.png');
+  background-position: center;
 }
 </style>
