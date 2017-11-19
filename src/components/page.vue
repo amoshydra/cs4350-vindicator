@@ -84,11 +84,18 @@
     </div>
   </article>
   
-  <article id="about-us" name="about-us" style="background: black;">
+  <article id="about-us" name="about-us">
     <div class="container">
     <div class="row">
       <div class="col">
         <DragonTitle>About us</DragonTitle>
+
+        <p style="max-width: 480px; margin: 1em auto;">
+          Flat8Studios was founded by members of 2017 batch of Game Development Lab (4350),
+          NUS School of Computing. We are a group of like-minded individuals who have a
+          passion to create creative and fun games.
+        </p>
+
         <div class="members">
           <Member v-for="member in human" :key="member.initial" :member="member"></Member>
         </div>
@@ -221,13 +228,13 @@ video, img {
   background-position: center;
   
   // Set size
-  height: 17em;
-  width: 15em;
+  height: 20em;
+  width: 20em;
   max-width: 100%;
 
   // Centralise object
   margin: auto;
-  margin-top: 4em;
+  margin-top: 1em;
   display: flex;
   justify-content: center;
 
