@@ -38,22 +38,23 @@
     
       <DragonTitle>Features</DragonTitle>
 
-      <agile :arrows="false"
-            :dots="false"
-            :autoplay="true"
-            :pauseOnHover="false"
-            :autoplaySpeed="4000"
-            :timing="'linear'"
-            :fade="true"
+      <agile
+        v-if="slides.length > 0"
+        :arrows="false"
+        :dots="false"
+        :autoplay="true"
+        :pauseOnHover="false"
+        :autoplaySpeed="4000"
+        :timing="'linear'"
+        :fade="true"
       >
-        <Slide video="https://giant.gfycat.com/RepulsiveTidyAmericanlobster.mp4">
-          Crisp Graphics
-        </Slide>
-        <Slide video="https://giant.gfycat.com/HarmoniousJampackedIlsamochadegu.mp4">
-          Immersive Spell Combinations
-        </Slide>
-        <Slide image="https://user-images.githubusercontent.com/8733840/31319182-43dd5efe-ac91-11e7-8cfc-2a1f08747362.gif">
-          Intuitive Spell Casting
+        <Slide
+          v-for="(slide, key) in slides"
+          :key="key"
+          :video="slide.video"
+          :image="slide.image"
+        >
+          {{ slide.text }}
         </Slide>
       </agile>
     </div>
@@ -138,7 +139,23 @@ export default {
         { name: 'Lek Jia Ying', role: '', initial: 'ljy' },
         { name: 'Amos Wong', role: '', initial: 'amos' },
       ],
+      slides: [],
     };
+  },
+  mounted() {
+    function getCORS(url, success) {
+      let xhr = new XMLHttpRequest();
+      if (!('withCredentials' in xhr)) xhr = new XDomainRequest(); // fix IE8/9
+      xhr.open('GET', url);
+      xhr.onload = success;
+      xhr.send();
+      return xhr;
+    }
+
+    getCORS('https://amoshydra.github.io/cs4350-vindicator/data/slides.json', (request) => {
+      const response = request.currentTarget.response || request.target.responseText;
+      this.slides = JSON.parse(response);
+    });
   },
 };
 </script>
