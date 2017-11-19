@@ -11,5 +11,14 @@
               "video": "https://user-images.githubusercontent.com/8733840/31319182-43dd5efe-ac91-11e7-8cfc-2a1f08747362.gif"
             }],
   "story": "VindicatoR is a VR action fantasy game set in the medieval times. Dive straight into fast-paced action as you take on the role of a wizard out for vengeance against waves of monsters hell-bent on destroying your Kingdom. Quick reflexes and a mastery of the elemental arts are crucial to survive the relentless waves of enemies across a multitude of levels and environments. In VindicatoR, there would be four elements to choose from: Fire, Wind, Lightning & Ice. Not only cast you cast them, as a master of the elemental arts, you can also merge spells of the same or different elements together to create more powerful combinations in a fun and immersive way!",
-  "about": "Flat8Studios was founded by members of 2017 batch of Game Development Lab (4350), NUS School of Computing. We are a group of like-minded individuals who have a passion to create creative and fun games."
+  "about": "Flat8Studios was founded by members of 2017 batch of Game Development Lab (4350), NUS School of Computing. We are a group of like-minded individuals who have a passion to create creative and fun games.",
+  
+  "human": [
+    { name: 'Tay Jie Hao', role: '', url: 'http://www.vindicator.ga/images/head/tjh.jpg' },
+    { name: 'Ken Lim', role: '', url: 'http://www.vindicator.ga/images/head/ken.jpg' },
+    { name: 'Chua Jia Xuan', role: '', url: 'http://www.vindicator.ga/images/head/cjx.jpg' },
+    { name: 'Tan Jun Kiat', role: '', url: 'http://www.vindicator.ga/images/head/tjk.jpg' },
+    { name: 'Lek Jia Ying', role: '', url: 'http://www.vindicator.ga/images/head/ljy.jpg' },
+    { name: 'Amos Wong', role: '', url: 'http://www.vindicator.ga/images/head/amos.jpg' }, 
+  ]
 }
